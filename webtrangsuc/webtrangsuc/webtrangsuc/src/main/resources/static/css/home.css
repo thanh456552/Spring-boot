@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif; 
+}
+
+.custom-header {
+    background: linear-gradient(to right, #1a1a1a, #363636);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    animation: headerFadeIn 0.5s ease;
+}
+
+@keyframes headerFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+    padding: 0.7rem 1.2rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 70%;
+}
+
+.brand-logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.brand-logo:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.search-container {
+    position: relative;
+    margin-left: 2rem;
+}
+
+.search-box {
+    border-radius: 30px;
+    border: none;
+    padding: 0.8rem 2.5rem 0.8rem 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: white;
+    width: 250px;
+    transition: all 0.3s ease;
+}
+
+.search-box::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-box:focus {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-icon:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.action-btn {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    background: white;
+    color: #00416A;
+    transform: translateY(-2px);
+}
